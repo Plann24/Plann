@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>นัดเที่ยว 1 – 15 ก.ค. 2025</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f8ff;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #5a5a5a;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    th, td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    th {
+      background-color: #4caf50;
+      color: white;
+    }
+    input {
+      width: 90%;
+      padding: 6px;
+      border: none;
+      background-color: #f3f3f3;
+    }
+    input:focus {
+      background-color: #fffbe0;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>📅 นัดเที่ยว 1 – 15 ก.ค. 2025</h1>
+  <table>
+    <tr>
+      <th>วันที่</th>
+      <th>วัน</th>
+      <th>ว่างไหม?</th>
+      <th>ชื่อคนว่าง</th>
+      <th>อยากไปไหน</th>
+    </tr>
+    <script>
+      const days = [
+        "อังคาร", "พุธ", "พฤหัส", "ศุกร์", "เสาร์",
+        "อาทิตย์", "จันทร์", "อังคาร", "พุธ",
+        "พฤหัส", "ศุกร์", "เสาร์", "อาทิตย์", "จันทร์", "อังคาร"
+      ];
+      for (let i = 1; i <= 15; i++) {
+        document.write(`
+          <tr>
+            <td>${i} ก.ค.</td>
+            <td>${days[i - 1]}</td>
+            <td><input type="text" placeholder="ว่าง / ไม่ว่าง"></td>
+            <td><input type="text" placeholder="ชื่อคุณ"></td>
+            <td><input type="text" placeholder="อยากไปไหน"></td>
+          </tr>
+        `);
+      }
+    </script>
+  </table>
+</body>
+</html>
